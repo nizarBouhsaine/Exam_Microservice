@@ -42,7 +42,7 @@ public class StudentController {
     @GetMapping("/getCourseByid/{id}")
     public void getCourses(@PathVariable Long id)
     {
-        CourseResponse courseResponse = restTemplate.getForObject("http://localhost:8888/COURSE-SERVICE/course/find", CourseResponse.class,id);
+        CourseResponse courseResponse = restTemplate.getForObject("http://localhost:8888/COURSE-SERVICE/course/getByid/{id}", CourseResponse.class,id);
         System.out.println(courseResponse);
     }
 
